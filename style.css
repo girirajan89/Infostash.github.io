@@ -471,7 +471,7 @@ a img.aligncenter {
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 }
 
@@ -667,6 +667,7 @@ a img.aligncenter {
 .navbar-right li a.hover-btn-new span{
 	position: relative;
 	z-index: 2;
+    font-size: 14px;
 	color: #333333;
 }
 .navbar-right li a.hover-btn-new:hover:after {
@@ -3841,6 +3842,48 @@ a.link-style3 {
     color: #333333;
     text-transform: capitalize;
 }
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #eea412;
+    border-right: none;
+    padding: 16px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #eea412;
+  }
+  
+  .searchTerm:focus{
+    color: #eea412;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 38px;
+    border: 1px solid #eea412;
+    background: #eea412;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 50%;
+    left: 50%;
+  }
+
 .course-item:hover .course-title a {
 	color: #eea412;
 }
