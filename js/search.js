@@ -1,31 +1,4 @@
-let suggestions = [
-  "Channel",
-  "CodingLab",
-  "CodingNepal",
-  "YouTube",
-  "YouTuber",
-  "YouTube Channel",
-  "Blogger",
-  "Bollywood",
-  "Vlogger",
-  "Vechiles",
-  "Facebook",
-  "Freelancer",
-  "Facebook Page",
-  "Designer",
-  "Developer",
-  "Web Designer",
-  "Web Developer",
-  "Login Form in HTML & CSS",
-  "How to learn HTML & CSS",
-  "How to learn JavaScript",
-  "How to became Freelancer",
-  "How to became Web Designer",
-  "How to start Gaming Channel",
-  "How to start YouTube Channel",
-  "What does HTML stands for?",
-  "What does CSS stands for?",
-];
+let suggestions = ["About", "Contact", "Course"];
 
 // getting all required elements
 const searchInput = document.querySelector(".searchInput");
@@ -35,6 +8,9 @@ const icon = searchInput.querySelector(".icon");
 let linkTag = searchInput.querySelector("a");
 let webLink;
 
+function reroute(event) {
+  window.location = "/" + event.toLocaleLowerCase() + ".html";
+}
 // if user press any key and release
 input.onkeyup = (e) => {
   let userData = e.target.value; //user enetered data
@@ -53,7 +29,10 @@ input.onkeyup = (e) => {
     let allList = resultBox.querySelectorAll("li");
     for (let i = 0; i < allList.length; i++) {
       //adding onclick attribute in all li tag
-      allList[i].setAttribute("onclick", "select(this)");
+      allList[i].setAttribute("onclick", "reroute()");
+      allList[i].onclick = function () {
+        reroute(this.innerText);
+      };
     }
   } else {
     searchInput.classList.remove("active"); //hide autocomplete box
