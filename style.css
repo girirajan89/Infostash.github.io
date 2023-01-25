@@ -471,7 +471,7 @@ a img.aligncenter {
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 }
 
@@ -667,6 +667,7 @@ a img.aligncenter {
 .navbar-right li a.hover-btn-new span{
 	position: relative;
 	z-index: 2;
+    font-size: 14px;
 	color: #333333;
 }
 .navbar-right li a.hover-btn-new:hover:after {
@@ -1691,8 +1692,63 @@ a img.aligncenter {
 	white-space: nowrap;
 }
 
-
-
+/*------------------------------------------------------------------
+    CHATBOT
+-------------------------------------------------------------------*/
+#chatbot-button{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    z-index: 1;
+}
+#chatbot-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 1;
+  }
+  
+  #chatbot-header {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  #chatbot-body {
+    padding: 10px;
+  }
+  
+  #chatbot-conversation {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    overflow-y: scroll;
+    height: 300px;
+  }
+  #chat-input{
+    display: flex;
+    flex-direction: row;
+  }
+  #chatbot-input {
+    width: 75%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  #chatbot-send {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    float: right;
+  }
+  
 /*------------------------------------------------------------------
     MESSAGE BOXES
 -------------------------------------------------------------------*/
@@ -3841,6 +3897,90 @@ a.link-style3 {
     color: #333333;
     text-transform: capitalize;
 }
+  /*------------------------------------
+                SEARCH BAR
+  ------------------------------------*/
+  .search-container{
+    max-width: 450px;
+    margin: 20px auto;
+  }
+  
+  .resultBox{
+    position: absolute;
+    background:#fff;
+    z-index: 999;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .search-container .searchInput{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 999;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  }
+  
+  .searchInput input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 14px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+  .searchInput.active input{
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .searchInput .resultBox{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  
+  .searchInput.active .resultBox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .resultBox li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .searchInput.active .resultBox li{
+    display: block;
+  }
+  .resultBox li:hover{
+    background: #efefef;
+  }
+  
+  .searchInput .icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+  }
+  /*Resize the wrap to see the search bar change!*/
+  
+
 .course-item:hover .course-title a {
 	color: #eea412;
 }
